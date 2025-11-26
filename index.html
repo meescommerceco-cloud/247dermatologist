@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>5 Redenen Waarom Duizenden Nederlanders Deze App Gebruiken Voor Huidadvies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B8A;
+            --primary-light: #FFE5EC;
+            --primary-dark: #D94E6B;
+            --text-dark: #1A1A2E;
+            --text-body: #4A4A5E;
+            --text-light: #8B8B9E;
+            --background: #FDFCFB;
+            --surface: #FFFFFF;
+            --border: #F0EFF4;
+            --accent: #6B7FFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--background);
+            color: var(--text-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', serif;
+            color: var(--text-dark);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            margin-bottom: 1.25rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #FFF5F8 100%);
+            padding: 3rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 107, 138, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            color: var(--text-body);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-weight: 400;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--surface);
+            padding: 2rem 0;
+            margin: -2rem 0 3rem;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            animation: fadeIn 1s ease-out backwards;
+        }
+
+        .stat-item:nth-child(1) { animation-delay: 0.2s; }
+        .stat-item:nth-child(2) { animation-delay: 0.4s; }
+        .stat-item:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .stat-number {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+            max-width: 750px;
+            margin: 0 auto 1.5rem;
+            color: var(--text-body);
+        }
+
+        /* Reason Cards */
+        .reason-section {
+            padding: 4rem 0;
+        }
+
+        .reason-card {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(26, 26, 46, 0.06);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(26, 26, 46, 0.1);
+        }
+
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+        }
+
+        .reason-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(255, 107, 138, 0.3);
+        }
+
+        .reason-title {
+            color: var(--text-dark);
+            margin-bottom: 1.25rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .reason-content {
+            color: var(--text-body);
+            font-size: 1.0625rem;
+            line-height: 1.8;
+        }
+
+        .reason-content ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .reason-content li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .reason-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Testimonial Box */
+        .testimonial {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            font-style: italic;
+        }
+
+        .testimonial-text {
+            color: var(--text-dark);
+            font-size: 1.0625rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-author {
+            color: var(--text-light);
+            font-size: 0.9375rem;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #F8F9FF 0%, #FFF5F8 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .info-box h4 {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+            color: var(--text-body);
+        }
+
+        .info-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Stats Visual */
+        .stats-visual {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 2px solid var(--border);
+        }
+
+        .stat-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-bar:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-bar-label {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9375rem;
+        }
+
+        .stat-bar-fill {
+            width: 100%;
+            height: 44px;
+            background: var(--border);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-bar-value {
+            position: absolute;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            color: white;
+            font-weight: 700;
+            font-size: 0.875rem;
+            transition: width 1.5s ease-out;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: white;
+            border-radius: 16px;
+            border: 2px solid var(--border);
+            transition: border-color 0.3s ease;
+        }
+
+        .process-step:hover {
+            border-color: var(--primary);
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, #FFF5F8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.875rem;
+            line-height: 32px;
+            margin-bottom: 1rem;
+        }
+
+        .step-title {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-description {
+            color: var(--text-body);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #2A2A3E 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 24px;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 107, 138, 0.1) 0%, transparent 50%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            min-height: 52px;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 16px rgba(255, 107, 138, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(255, 107, 138, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--background);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .trust-badge-icon {
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 20px rgba(26, 26, 46, 0.08);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-header {
+            background: var(--text-dark);
+            color: white;
+            font-weight: 700;
+            padding: 1.25rem;
+            font-size: 0.9375rem;
+        }
+
+        .comparison-cell {
+            padding: 1.5rem;
+        }
+
+        .comparison-cell:first-child {
+            border-right: 1px solid var(--border);
+            background: var(--background);
+        }
+
+        .comparison-cell h4 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .comparison-cell p {
+            font-size: 0.9375rem;
+            margin-bottom: 0;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-text {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2.5rem 0 3rem;
+            }
+
+            .hero-tag {
+                font-size: 0.8125rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .reason-card {
+                padding: 2rem 1.5rem;
+                margin-bottom: 2rem;
+                border-radius: 16px;
+            }
+
+            .reason-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-cell {
+                padding: 1.25rem;
+            }
+
+            .comparison-cell:first-child {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .cta-section {
+                padding: 3rem 1.5rem;
+                margin: 3rem 0;
+                border-radius: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .testimonial {
+                padding: 1.25rem;
+                margin: 1.5rem 0;
+            }
+
+            .info-box {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .stats-visual {
+                padding: 1.5rem;
+            }
+
+            .stat-bar-fill {
+                height: 40px;
+            }
+
+            .stat-bar-value {
+                font-size: 0.8125rem;
+                padding-right: 0.75rem;
+            }
+
+            /* Better touch targets for mobile */
+            .btn {
+                min-height: 48px;
+                font-size: 1rem;
+            }
+
+            /* Reduce animations on mobile for performance */
+            .reason-card:hover {
+                transform: none;
+            }
+
+            /* Better readability on mobile */
+            .reason-content ul {
+                margin: 1.25rem 0;
+            }
+
+            .reason-content li {
+                padding-left: 1.75rem;
+                margin-bottom: 0.875rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Small mobile devices */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            h1 {
+                font-size: 1.875rem;
+                line-height: 1.25;
+            }
+
+            h2 {
+                font-size: 1.625rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.0625rem;
+            }
+
+            .reason-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.8125rem;
+            }
+
+            .step-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 1.75rem;
+            }
+
+            .cta-section {
+                padding: 2.5rem 1.25rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Landscape mobile optimization */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+                padding: 2rem 0 2.5rem;
+            }
+
+            .stats-bar {
+                padding: 1.5rem 0;
+            }
+
+            .reason-card {
+                margin-bottom: 1.75rem;
+            }
+        }
+
+        /* Improve touch interactions */
+        @media (hover: none) and (pointer: coarse) {
+            .btn {
+                min-height: 48px;
+                padding: 1rem 1.75rem;
+            }
+
+            .reason-card:active {
+                transform: scale(0.98);
+            }
+
+            .btn:active {
+                transform: scale(0.97);
+            }
+        }
+
+        /* Animations on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">Trending in Nederland</span>
+                <h1>5 Redenen Waarom Duizenden Nederlanders Kiezen Voor Online Huidadvies</h1>
+                <p class="hero-subtitle">Van expats in Azië tot drukke ouders in Utrecht: steeds meer mensen ontdekken een alternatieve manier. Dit is waarom.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">1.000+</span>
+                    <span class="stat-label">Tevreden gebruikers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.8/5</span>
+                    <span class="stat-label">Gemiddelde beoordeling</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12-48u</span>
+                    <span class="stat-label">Reactietijd (jij kiest)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <p>Lange wachttijden, volle agenda's, en beperkte toegankelijkheid... De traditionele manier om huidvragen te stellen is niet voor iedereen meer de meest praktische oplossing.</p>
+            <p>Meer dan 1.000 Nederlanders gingen je al voor en ontdekten een flexibele aanpak. <strong>Dit zijn de 5 belangrijkste redenen waarom.</strong></p>
+        </div>
+    </section>
+
+    <!-- Reason 1 -->
+    <section class="reason-section">
+        <div class="container">
+            <div class="reason-card fade-in">
+                <div class="reason-number">1</div>
+                <h2 class="reason-title">Tijd Is Het Nieuwe Goud</h2>
+                <div class="reason-content">
+                    <p><strong>Geen vrij nemen. Geen reistijd. Geen wachtkamer.</strong></p>
+                    <p>De gemiddelde Nederlander besteedt <strong>3-4 uur</strong> aan één traditionele afspraak:</p>
+                    
+                    <div class="stats-visual">
+                        <div class="stat-bar">
+                            <div class="stat-bar-label">Wachttijd afspraak</div>
+                            <div class="stat-bar-fill">
+                                <div class="stat-bar-value" style="width: 85%;">4-8 weken</div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-bar-label">Reistijd h&t</div>
+                            <div class="stat-bar-fill">
+                                <div class="stat-bar-value" style="width: 60%;">45-90 min</div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-bar-label">Wachtkamer</div>
+                            <div class="stat-bar-fill">
+                                <div class="stat-bar-value" style="width: 30%;">15-30 min</div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-bar-label">Gesprek</div>
+                            <div class="stat-bar-fill">
+                                <div class="stat-bar-value" style="width: 15%;">8-12 min</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="text-align: center; font-size: 1.25rem; color: var(--primary); font-weight: 700; margin-top: 2rem;">Met een online consult? <span style="font-size: 1.5rem;">10 minuten</span> van jouw tijd.</p>
+
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Drukke baan, dus weinig tijd om vrij te nemen. Dit was super. Erg blij mee."</p>
+                        <p class="testimonial-author">— F. Carlijns, gebruiker</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 2 -->
+            <div class="reason-card fade-in">
+                <div class="reason-number">2</div>
+                <h2 class="reason-title">Altijd Toegankelijk, Op Jouw Moment</h2>
+                <div class="reason-content">
+                    <p><strong>Het is zondagavond, 22:47u.</strong></p>
+                    <p>Je hebt een vraag over je huid. Je wilt graag advies. Maar traditionele kanalen zijn gesloten. Tot maandagochtend 08:30u. Als ze tenminste opnemen.</p>
+                    
+                    <p>Steeds meer mensen kiezen voor <strong>24/7 toegang</strong> tot erkende huidexperts.</p>
+
+                    <ul>
+                        <li>Ook in het weekend</li>
+                        <li>Ook 's avonds laat</li>
+                        <li>Ook tijdens vakantie</li>
+                        <li>Ook vanuit het buitenland</li>
+                    </ul>
+
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Briljant! Met deze app kreeg ik advies van een huidexpert uit Nederland, terwijl ik op reis was in Azië."</p>
+                        <p class="testimonial-author">— Joelle, gebruiker</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>💡 Perfect voor mensen met:</h4>
+                        <ul>
+                            <li>Onregelmatige werktijden of ploegendiensten</li>
+                            <li>Kinderen en een volle agenda</li>
+                            <li>Regelmatige reizen of verblijf in het buitenland</li>
+                            <li>Beperkte mobiliteit of afstand tot praktijk</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 3 -->
+            <div class="reason-card fade-in">
+                <div class="reason-number">3</div>
+                <h2 class="reason-title">Echte Experts Met Officiële Registratie</h2>
+                <div class="reason-content">
+                    <p style="font-size: 1.25rem; color: var(--text-dark); font-style: italic;">"Maar zijn dit échte professionals?"</p>
+                    
+                    <p><strong>Absoluut.</strong> Daarom werken deze platformen alleen met <strong>BIG-geregistreerde huidexperts</strong> die ook in Nederlandse ziekenhuizen en klinieken werken.</p>
+
+                    <div class="info-box">
+                        <h4>Wat betekent dat?</h4>
+                        <ul>
+                            <li>Volledige medische opleiding en registratie</li>
+                            <li>Geregistreerd bij de overheid (BIG-register)</li>
+                            <li>Werkzaam in academische of gespecialiseerde centra</li>
+                            <li>Jarenlange praktijkervaring</li>
+                            <li>Lid van relevante beroepsverenigingen</li>
+                        </ul>
+                    </div>
+
+                    <p style="background: var(--primary-light); padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+                        <strong style="color: var(--primary);">Het verschil?</strong> Ze zijn ook bereikbaar via een app.<br>
+                        <strong style="color: var(--primary);">De kwaliteit?</strong> Precies dezelfde.
+                    </p>
+
+                    <div class="testimonial">
+                        <p class="testimonial-text">💡 Het platform werkt met erkende professionals die hun werk serieus nemen en dezelfde standaarden hanteren als in traditionele settings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reason 4 -->
+            <div class="reason-card fade-in">
+                <div class="reason-number">4</div>
+                <h2 class="reason-title">Vaak Voordeliger Dan Je Denkt</h2>
+                <div class="reason-content">
+                    <p style="font-size: 1.25rem; color: var(--text-dark); font-style: italic;">"Wat zijn de kosten precies?"</p>
+                    
+                    <p><strong>Een eerlijke vraag.</strong> Hier is volledige transparantie:</p>
+
+                    <div class="comparison-table">
+                        <div class="comparison-row">
+                            <div class="comparison-header">Traditionele Weg</div>
+                            <div class="comparison-header">Online Platform</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell">
+                                <h4>Wachttijd</h4>
+                                <p>4-8 weken voor een afspraak, vervolgens reistijd en wachtkamer</p>
+                            </div>
+                            <div class="comparison-cell">
+                                <h4>Directe Toegang</h4>
+                                <p>12-48 uur responstijd (jij kiest de snelheid)</p>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell">
+                                <h4>Beschikbaarheid</h4>
+                                <p>Alleen tijdens kantooruren, vaak beperkte inlooptijden</p>
+                            </div>
+                            <div class="comparison-cell">
+                                <h4>24/7 Beschikbaar</h4>
+                                <p>Upload je vraag wanneer het jou uitkomt, ook in weekend</p>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell">
+                                <h4>Locatie</h4>
+                                <p>Fysieke praktijk, parkeren, reistijd</p>
+                            </div>
+                            <div class="comparison-cell">
+                                <h4>Vanuit Huis</h4>
+                                <p>Waar je ook bent - in Nederland of daarbuiten</p>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell">
+                                <h4>Kosten</h4>
+                                <p>Variabel - afhankelijk van verzekering en situatie</p>
+                            </div>
+                            <div class="comparison-cell">
+                                <h4>Vaste Prijs</h4>
+                                <p>€39 / €59 / €79 - vooraf duidelijk, geen verrassingen</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>💰 Voordelen van deze aanpak:</h4>
+                        <ul>
+                            <li>Volledige transparantie - weet vooraf wat je betaalt</li>
+                            <li>Geen verborgen kosten of verrassingen</li>
+                            <li>Flexibele snelheidsopties die bij jouw situatie passen</li>
+                            <li>Betaal alleen wanneer je daadwerkelijk gebruik maakt</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 2rem;"><strong>Ideaal voor iedereen die waarde hecht aan gemak, snelheid en duidelijkheid.</strong></p>
+                </div>
+            </div>
+
+            <!-- Reason 5 -->
+            <div class="reason-card fade-in">
+                <div class="reason-number">5</div>
+                <h2 class="reason-title">Het Werkt, Simpelweg</h2>
+                <div class="reason-content">
+                    <p><strong>Geen ingewikkelde processen. Geen eindeloze wachtlijsten.</strong><br>
+                    Gewoon: snel, duidelijk, en effectief.</p>
+
+                    <h3 style="text-align: center; margin: 2.5rem 0 2rem;">Zo werkt het:</h3>
+
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-icon">📱</div>
+                            <div class="step-number">1</div>
+                            <h4 class="step-title">Download de app</h4>
+                            <p class="step-description">Beschikbaar voor iOS en Android. Binnen 2 minuten klaar.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">📸</div>
+                            <div class="step-number">2</div>
+                            <h4 class="step-title">Upload & Beschrijf</h4>
+                            <p class="step-description">Foto's van je huid en korte vragenlijst. Duurt ongeveer 5 minuten.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-icon">⚕️</div>
+                            <div class="step-number">3</div>
+                            <h4 class="step-title">Ontvang Reactie</h4>
+                            <p class="step-description">Persoonlijke reactie van erkende huidexpert binnen 12-48 uur.</p>
+                        </div>
+                    </div>
+
+                    <p style="text-align: center; font-size: 1.25rem; margin: 2rem 0;"><strong>Klaar.</strong></p>
+
+                    <p>En als je aanvullende vragen hebt? Die kun je gewoon stellen. Zonder extra afspraak te maken.</p>
+
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Ik kon ook aanvullende vragen stellen, die snel en deskundig werden beantwoord. Aanrader."</p>
+                        <p class="testimonial-author">— Smeets C., gebruiker</p>
+                    </div>
+
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Vragenlijst invullen, foto's uploaden, klaar! Binnen 24 uur had ik uitgebreide feedback. Voor dringende vragen is de app zeker aan te bevelen!"</p>
+                        <p class="testimonial-author">— Thaliss S., gebruiker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Klaar Om Het Zelf Te Proberen?</h2>
+                <p>Meer dan 1.000 Nederlanders gingen je al voor. Van drukke professionals tot reizigers in het buitenland.</p>
+                <p>De app is gratis te downloaden. Je betaalt alleen als je daadwerkelijk een consult aanvraagt.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <span>📱</span>
+                        Download via App Store
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <span>🤖</span>
+                        Download via Google Play
+                    </a>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">✓</span>
+                        <span>Geen abonnement</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">✓</span>
+                        <span>Geen verplichtingen</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">✓</span>
+                        <span>Erkende professionals</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 2rem; font-size: 0.9375rem;">Begin vandaag nog, of download de app nu en beslis later.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 247dermatologist | <a href="#" class="footer-link">Privacybeleid</a> | <a href="#" class="footer-link">Algemene Voorwaarden</a></p>
+            <p class="footer-text" style="font-size: 0.75rem; margin-top: 1rem;">Alle vermelde experts zijn BIG-geregistreerd en werkzaam in Nederland. Deze service is bedoeld voor informatieve doeleinden en vervangt geen professionele consultatie bij spoedeisende situaties.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate stat bars on load
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.stat-bar-value').forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
